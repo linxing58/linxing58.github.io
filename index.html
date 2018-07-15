@@ -296,17 +296,33 @@
             <h1 id="1-ImageAI简介"><a href="#1-ImageAI简介" class="headerlink" title="1 ImageAI简介"></a>1 ImageAI简介</h1><p>ImageAI是一个python的库，它能使开发人员用简单几行代码构建具有深度学习和计算机视觉功能的应用程序和系统。它是由Moses Olafenwa和John Olafenwa两位开发并维护。<br>具体git地址：<a href="https://github.com/OlafenwaMoses/ImageAI" target="_blank" rel="noopener">https://github.com/OlafenwaMoses/ImageAI</a> </p>
 <h1 id="2-安装"><a href="#2-安装" class="headerlink" title="2 安装"></a>2 安装</h1><p>首先当然是python，imageai暂时只支持3.5.1或之后的版本,一般都是用3.6吧<br>还有以下这些: </p>
 <ul>
-<li>pip3 Install </li>
-<li>Tensorflow 1.4.0 (and later versions) Install or install via pip<br>pip3 install –upgrade tensorflow </li>
-<li>Numpy 1.13.1 (and later versions) Install or install via pip<br>pip3 install numpy </li>
-<li>SciPy 0.19.1 (and later versions) Install or install via pip<br>pip3 install scipy </li>
-<li>OpenCV Install or install via pip<br>pip3 install opencv-python </li>
-<li>Pillow Install or install via pip<br>pip3 install pillow </li>
-<li>Matplotlib Install or install via pip<br>pip3 install matplotlib </li>
-<li>h5py Install or install via pip<br>pip3 install h5py </li>
-<li>Keras 2.x Install or install via pip<br>pip3 install keras </li>
+<li><p>TENSORFLOW 1.4.0 (AND LATER VERSIONS) INSTALL OR INSTALL VIA PIP</p>
+<p>   pip3 install –upgrade tensorflow </p>
+</li>
+<li><p>Numpy 1.13.1 (and later versions) Install or install via pip</p>
+<p>   pip3 install numpy </p>
+</li>
+<li><p>SciPy 0.19.1 (and later versions) Install or install via pip</p>
+<p>   pip3 install scipy </p>
+</li>
+<li><p>OpenCV Install or install via pip</p>
+<p>   pip3 install opencv-python </p>
+</li>
+<li><p>Pillow Install or install via pip</p>
+<p>   pip3 install pillow </p>
+</li>
+<li><p>Matplotlib Install or install via pip</p>
+<p>   pip3 install matplotlib </p>
+</li>
+<li><p>h5py Install or install via pip</p>
+<p>   pip3 install h5py </p>
+</li>
+<li><p>Keras 2.x Install or install via pip</p>
+<p>   pip3 install keras </p>
+</li>
 </ul>
-<p>做好准备工作后就是安装了，可以直接使用pip3安装 如下<br>    pip3 install <a href="https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl" target="_blank" rel="noopener">https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl</a><br>当然也可以将imageai-2.0.1-py3-none-any.whl下载之后安装<br>    pip3 install C:\User\MyUser\Downloads\imageai-2.0.1-py3-none-any.whl</p>
+<p>做好准备工作后就是安装了，可以直接使用pip3安装 如下<br>    <code>pip3 install https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl</code><br>当然也可以将imageai-2.0.1-py3-none-any.whl下载之后安装</p>
+<p>pip3 install C:\User\MyUser\Downloads\imageai-2.0.1-py3-none-any.whl</p>
 <h1 id="3-入门"><a href="#3-入门" class="headerlink" title="3 入门"></a>3 入门</h1><pre><code>from imageai.Detection import ObjectDetection
 import os
 #设置日志级别
@@ -328,8 +344,6 @@ detections, objects_path = detector.detectObjectsFromImage(input_image=os.path.j
 
 for eachObject, eachObjectPath in zip(detections, objects_path):
     print(eachObject[&quot;name&quot;] + &quot; : &quot; + eachObject[&quot;percentage_probability&quot;] )
-
-运行会提示
 </code></pre><h1 id="4-去除识别标签以及准确度"><a href="#4-去除识别标签以及准确度" class="headerlink" title="4 去除识别标签以及准确度"></a>4 去除识别标签以及准确度</h1><pre><code>在实际使用中我们可能不需要将识别出来的物体标签化以及显示，这里需要修改源码部分
 https://github.com/OlafenwaMoses/ImageAI/blob/master/imageai/Detection/__init__.py
 注释掉draw_caption方法即可
