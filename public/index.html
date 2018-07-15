@@ -200,6 +200,15 @@
 
     
     
+      
+      
+        
+        
+        
+      
+
+      
+    
 
     
       
@@ -285,9 +294,39 @@
         
           
             <h1 id="1-ImageAI简介"><a href="#1-ImageAI简介" class="headerlink" title="1 ImageAI简介"></a>1 ImageAI简介</h1><p>ImageAI是一个python的库，它能使开发人员用简单几行代码构建具有深度学习和计算机视觉功能的应用程序和系统。它是由Moses Olafenwa和John Olafenwa两位开发并维护。<br>具体git地址：<a href="https://github.com/OlafenwaMoses/ImageAI" target="_blank" rel="noopener">https://github.com/OlafenwaMoses/ImageAI</a> </p>
-<h1 id="2-安装"><a href="#2-安装" class="headerlink" title="2 安装"></a>2 安装</h1><p>首先当然是python，imageai暂时只支持3.5.1或之后的版本,一般都是用3.6吧<br>还有以下这些:<br>Tensorflow&gt;=1.4.0<br>Numpy &gt;=1.13.1<br>SciPy &gt;=0.19.1<br>OpenCV<br>Pillow<br>Matplotlib<br>h5py<br>Keras 2.x<br>做好准备工作后就是安装了，可以直接使用pip3安装 如下<br>    pip3 install <a href="https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl" target="_blank" rel="noopener">https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl</a><br>当然也可以将imageai-2.0.1-py3-none-any.whl下载之后安装<br>    pip3 install C:\User\MyUser\Downloads\imageai-2.0.1-py3-none-any.whl</p>
+<h1 id="2-安装"><a href="#2-安装" class="headerlink" title="2 安装"></a>2 安装</h1><p>首先当然是python，imageai暂时只支持3.5.1或之后的版本,一般都是用3.6吧<br>还有以下这些: </p>
+<ul>
+<li><p>TENSORFLOW 1.4.0 (AND LATER VERSIONS) INSTALL OR INSTALL VIA PIP</p>
+<p>   pip3 install –upgrade tensorflow </p>
+</li>
+<li><p>Numpy 1.13.1 (and later versions) Install or install via pip</p>
+<p>   pip3 install numpy </p>
+</li>
+<li><p>SciPy 0.19.1 (and later versions) Install or install via pip</p>
+<p>   pip3 install scipy </p>
+</li>
+<li><p>OpenCV Install or install via pip</p>
+<p>   pip3 install opencv-python </p>
+</li>
+<li><p>Pillow Install or install via pip</p>
+<p>   pip3 install pillow </p>
+</li>
+<li><p>Matplotlib Install or install via pip</p>
+<p>   pip3 install matplotlib </p>
+</li>
+<li><p>h5py Install or install via pip</p>
+<p>   pip3 install h5py </p>
+</li>
+<li><p>Keras 2.x Install or install via pip</p>
+<p>   pip3 install keras </p>
+</li>
+</ul>
+<p>做好准备工作后就是安装了，可以直接使用pip3安装 如下<br>    <code>pip3 install https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl</code><br>当然也可以将imageai-2.0.1-py3-none-any.whl下载之后安装</p>
+<p>pip3 install C:\User\MyUser\Downloads\imageai-2.0.1-py3-none-any.whl</p>
 <h1 id="3-入门"><a href="#3-入门" class="headerlink" title="3 入门"></a>3 入门</h1><pre><code>from imageai.Detection import ObjectDetection
 import os
+#设置日志级别
+os.environ[&apos;TF_CPP_MIN_LOG_LEVEL&apos;] = &apos;2&apos;
 
 execution_path = os.getcwd()
 
@@ -305,96 +344,10 @@ detections, objects_path = detector.detectObjectsFromImage(input_image=os.path.j
 
 for eachObject, eachObjectPath in zip(detections, objects_path):
     print(eachObject[&quot;name&quot;] + &quot; : &quot; + eachObject[&quot;percentage_probability&quot;] )
-
-运行会提示
 </code></pre><h1 id="4-去除识别标签以及准确度"><a href="#4-去除识别标签以及准确度" class="headerlink" title="4 去除识别标签以及准确度"></a>4 去除识别标签以及准确度</h1><pre><code>在实际使用中我们可能不需要将识别出来的物体标签化以及显示，这里需要修改源码部分
 https://github.com/OlafenwaMoses/ImageAI/blob/master/imageai/Detection/__init__.py
 注释掉draw_caption方法即可
 </code></pre>
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/07/15/天地图分辨率/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-07-15T20:53:29+08:00" content="2018-07-15">
-              2018-07-15
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>title: 天地图分辨率<br>date: 2016-01-21 10:18:04<br>tags:天地图 WMTS<br>    javascript<br>    var scales = [2.958293554545656E8, 1.479146777272828E8, 7.39573388636414E7,<br>                                 3.69786694318207E7, 1.848933471591035E7, 9244667.357955175,<br>                                          4622333.678977588, 2311166.839488794, 1155583.419744397,<br>                                          577791.7098721985, 288895.85493609926, 144447.92746804963,<br>                                          72223.96373402482, 36111.98186701241, 18055.990933506204,<br>                                          9027.995466753102, 4513.997733376551, 2256.998866688275,<br>                                          1128.4994333441375];<br>    var matrixIds = [], resolutions = [0.7031249999999999,0.35156249999999994,0.17578124999999997,0.08789062499999998,0.04394531249999999,0.021972656249999996,0.010986328125000003,0.005493164062500002,0.002746582031250001,0.0013732910156250004,0.0006866455078125002,0.0003433227539062501,0.00017166137695312505,0.00008583068847656253,0.000042915344238281263,0.000021457672119140632,0.000010728836059570316,0.000005364418029785155,0.0000026822090148925777];<br>    for (var i = 0; i &lt; resolutions.length; i++) {<br>        matrixIds[i] = { identifier: i + 1 }; //天地图的identifier是从1开始的<br>    }</p>
-
           
         
       
@@ -456,7 +409,7 @@ https://github.com/OlafenwaMoses/ImageAI/blob/master/imageai/Detection/__init__.
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

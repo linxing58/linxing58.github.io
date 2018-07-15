@@ -10,21 +10,49 @@ ImageAI是一个python的库，它能使开发人员用简单几行代码构建�
 # 2 安装
 首先当然是python，imageai暂时只支持3.5.1或之后的版本,一般都是用3.6吧 
 还有以下这些: 
-Tensorflow>=1.4.0 
-Numpy >=1.13.1 
-SciPy >=0.19.1 
-OpenCV 
-Pillow 
-Matplotlib 
-h5py 
-Keras 2.x
+
+- TENSORFLOW 1.4.0 (AND LATER VERSIONS) INSTALL OR INSTALL VIA PIP
+ 
+     pip3 install --upgrade tensorflow 
+
+- Numpy 1.13.1 (and later versions) Install or install via pip
+ 
+     pip3 install numpy 
+
+- SciPy 0.19.1 (and later versions) Install or install via pip
+
+     pip3 install scipy 
+
+- OpenCV Install or install via pip
+ 
+     pip3 install opencv-python 
+
+- Pillow Install or install via pip
+ 
+     pip3 install pillow 
+
+- Matplotlib Install or install via pip
+ 
+     pip3 install matplotlib 
+
+- h5py Install or install via pip
+ 
+     pip3 install h5py 
+
+- Keras 2.x Install or install via pip
+ 
+     pip3 install keras 
+
 做好准备工作后就是安装了，可以直接使用pip3安装 如下
-    pip3 install https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl 
+    `pip3 install https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl `
 当然也可以将imageai-2.0.1-py3-none-any.whl下载之后安装
-    pip3 install C:\User\MyUser\Downloads\imageai-2.0.1-py3-none-any.whl
+
+pip3 install C:\User\MyUser\Downloads\imageai-2.0.1-py3-none-any.whl
 # 3 入门 
-    from imageai.Detection import ObjectDetection
+	from imageai.Detection import ObjectDetection
     import os
+    #设置日志级别
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
     execution_path = os.getcwd()
 
@@ -43,7 +71,6 @@ Keras 2.x
     for eachObject, eachObjectPath in zip(detections, objects_path):
         print(eachObject["name"] + " : " + eachObject["percentage_probability"] )
     
-    运行会提示
 # 4 去除识别标签以及准确度
     在实际使用中我们可能不需要将识别出来的物体标签化以及显示，这里需要修改源码部分
     https://github.com/OlafenwaMoses/ImageAI/blob/master/imageai/Detection/__init__.py
