@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="◆Lincoln&#39;s Giiiiiiiiiiiiiiis Blog">
 <meta property="og:description" content="1 ImageAI简介ImageAI是一个python的库，它能使开发人员用简单几行代码构建具有深度学习和计算机视觉功能的应用程序和系统。它是由Moses Olafenwa和John Olafenwa两位开发并维护。具体git地址：https://github.com/OlafenwaMoses/ImageAI  2 安装首先当然是python，imageai暂时只支持3.5.1或之后的版本,一般">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-15T13:37:28.898Z">
+<meta property="og:updated_time" content="2018-07-15T13:44:13.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图像识别ImageAI入门">
 <meta name="twitter:description" content="1 ImageAI简介ImageAI是一个python的库，它能使开发人员用简单几行代码构建具有深度学习和计算机视觉功能的应用程序和系统。它是由Moses Olafenwa和John Olafenwa两位开发并维护。具体git地址：https://github.com/OlafenwaMoses/ImageAI  2 安装首先当然是python，imageai暂时只支持3.5.1或之后的版本,一般">
@@ -273,9 +273,23 @@
 
       
         <h1 id="1-ImageAI简介"><a href="#1-ImageAI简介" class="headerlink" title="1 ImageAI简介"></a>1 ImageAI简介</h1><p>ImageAI是一个python的库，它能使开发人员用简单几行代码构建具有深度学习和计算机视觉功能的应用程序和系统。它是由Moses Olafenwa和John Olafenwa两位开发并维护。<br>具体git地址：<a href="https://github.com/OlafenwaMoses/ImageAI" target="_blank" rel="noopener">https://github.com/OlafenwaMoses/ImageAI</a> </p>
-<h1 id="2-安装"><a href="#2-安装" class="headerlink" title="2 安装"></a>2 安装</h1><p>首先当然是python，imageai暂时只支持3.5.1或之后的版本,一般都是用3.6吧<br>还有以下这些:<br>Tensorflow&gt;=1.4.0<br>Numpy &gt;=1.13.1<br>SciPy &gt;=0.19.1<br>OpenCV<br>Pillow<br>Matplotlib<br>h5py<br>Keras 2.x<br>做好准备工作后就是安装了，可以直接使用pip3安装 如下<br>    pip3 install <a href="https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl" target="_blank" rel="noopener">https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl</a><br>当然也可以将imageai-2.0.1-py3-none-any.whl下载之后安装<br>    pip3 install C:\User\MyUser\Downloads\imageai-2.0.1-py3-none-any.whl</p>
+<h1 id="2-安装"><a href="#2-安装" class="headerlink" title="2 安装"></a>2 安装</h1><p>首先当然是python，imageai暂时只支持3.5.1或之后的版本,一般都是用3.6吧<br>还有以下这些: </p>
+<ul>
+<li>pip3 Install </li>
+<li>Tensorflow 1.4.0 (and later versions) Install or install via pip<br>pip3 install –upgrade tensorflow </li>
+<li>Numpy 1.13.1 (and later versions) Install or install via pip<br>pip3 install numpy </li>
+<li>SciPy 0.19.1 (and later versions) Install or install via pip<br>pip3 install scipy </li>
+<li>OpenCV Install or install via pip<br>pip3 install opencv-python </li>
+<li>Pillow Install or install via pip<br>pip3 install pillow </li>
+<li>Matplotlib Install or install via pip<br>pip3 install matplotlib </li>
+<li>h5py Install or install via pip<br>pip3 install h5py </li>
+<li>Keras 2.x Install or install via pip<br>pip3 install keras </li>
+</ul>
+<p>做好准备工作后就是安装了，可以直接使用pip3安装 如下<br>    pip3 install <a href="https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl" target="_blank" rel="noopener">https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl</a><br>当然也可以将imageai-2.0.1-py3-none-any.whl下载之后安装<br>    pip3 install C:\User\MyUser\Downloads\imageai-2.0.1-py3-none-any.whl</p>
 <h1 id="3-入门"><a href="#3-入门" class="headerlink" title="3 入门"></a>3 入门</h1><pre><code>from imageai.Detection import ObjectDetection
 import os
+#设置日志级别
+os.environ[&apos;TF_CPP_MIN_LOG_LEVEL&apos;] = &apos;2&apos;
 
 execution_path = os.getcwd()
 
